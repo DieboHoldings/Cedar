@@ -436,8 +436,23 @@
       grid-template-columns: 1.3fr 1fr;
       gap: 36px;
     }
-    .footer-brand { display: flex; gap: 16px; }
-    .footer-brand img { width: 58px; height: 58px; object-fit: contain; }
+    .footer-brand { display: flex; gap: 20px; align-items: stretch; }
+    .footer-brand img {
+      flex: none;
+      width: auto;
+      height: 100%;
+      max-height: none;
+      aspect-ratio: 1;
+      object-fit: contain;
+      align-self: stretch;
+    }
+    .footer-brand > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      min-width: 0;
+    }
     .footer-brand p { margin: 8px 0 0; color: var(--muted); font-size: 15px; max-width: 28em; }
     .footer-links {
       display: flex;
@@ -479,7 +494,7 @@
   <header class="site-header">
     <div class="sec nav">
       <a class="brand" href="#top">
-        <img src="/assets/brand/logo.png" width="52" height="52" alt="Cedar Services logo">
+        <img src="/assets/brand/logo.png?v=2" width="52" height="52" alt="Cedar Services logo">
         <span class="brand-text">
           <strong>Cedar Services</strong>
           <span>Power Washing · Westwood, MA</span>
@@ -796,7 +811,7 @@
   <footer>
     <div class="sec footer-grid">
       <div class="footer-brand">
-        <img src="/assets/brand/logo.png" width="58" height="58" alt="">
+        <img src="/assets/brand/logo.png?v=2" alt="Cedar Services logo">
         <div>
           <strong style="font-family:var(--font-display);font-size:19px;color:var(--green-deep);">Cedar Services</strong>
           <p>Power washing for Westwood, MA and towns within about 20 miles. Founded by Andrew Easton &amp; Nicolas Demien.</p>
