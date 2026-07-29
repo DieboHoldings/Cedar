@@ -308,6 +308,43 @@
     }
     .shot figcaption p { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
 
+    .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .review {
+      margin: 0;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .review .stars {
+      color: var(--green);
+      letter-spacing: 0.12em;
+      font-size: 14px;
+    }
+    .review p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.65;
+      color: #3f4d38;
+      flex: 1;
+    }
+    .review footer {
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: none;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .review footer strong {
+      color: var(--ink);
+      font-weight: 600;
+      font-family: var(--font-display);
+    }
+
     .split {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -461,11 +498,11 @@
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .hero, .split, .quote-grid, .footer-grid { grid-template-columns: 1fr; }
-      .grid-3, .gallery { grid-template-columns: 1fr 1fr; }
+      .grid-3, .gallery, .reviews { grid-template-columns: 1fr 1fr; }
       .hero { padding-top: 40px; gap: 32px; }
     }
     @media (max-width: 620px) {
-      .grid-3, .gallery { grid-template-columns: 1fr; }
+      .grid-3, .gallery, .reviews { grid-template-columns: 1fr; }
       .form-row, .stat-row { grid-template-columns: 1fr 1fr; }
       .panel, .charity { padding: 28px 22px; }
       .sec { padding-left: 18px; padding-right: 18px; }
@@ -486,6 +523,7 @@
         <a href="#services">Services</a>
         <a href="#resanding">Re-sanding</a>
         <a href="#gallery">Before &amp; After</a>
+        <a href="#reviews">Reviews</a>
         <a href="#about">Why Cedar</a>
         <a href="#charity">Giving Back</a>
       </nav>
@@ -722,18 +760,31 @@
       </div>
     </section>
 
-    <section class="block sec" id="areas">
+    <section class="block sec" id="reviews">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Where we work</p>
-          <h2 style="margin-top:10px;">Towns within ~20 miles</h2>
+          <p class="eyebrow">Neighbors say</p>
+          <h2 style="margin-top:10px;">Testimonials</h2>
         </div>
+        <p class="lead" style="margin:0;">A few words from homeowners around Westwood and nearby towns.</p>
       </div>
-      <p class="lead" data-reveal>
-        Based in Westwood, MA. We serve surrounding towns including Westwood, Medfield, Norwood,
-        Walpole, Dedham, and more within about a 20-mile radius. We connect to a water source on site —
-        we do not haul our own water tank.
-      </p>
+      <div class="reviews">
+        <blockquote class="review" data-reveal>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <p>“Andrew and Nicolas showed up when they said they would and my deck looks brand new. They even moved the grill back exactly where it was.”</p>
+          <footer><strong>Karen M.</strong> · Westwood</footer>
+        </blockquote>
+        <blockquote class="review" data-reveal>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <p>“Great price and they were careful around my hydrangeas. Siding went from green to white in an afternoon.”</p>
+          <footer><strong>Dave R.</strong> · Norwood</footer>
+        </blockquote>
+        <blockquote class="review" data-reveal>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <p>“Hired them for the driveway and ended up adding the walkway. Polite kids, real work ethic — happy to support local.”</p>
+          <footer><strong>Priya S.</strong> · Dedham</footer>
+        </blockquote>
+      </div>
     </section>
 
     <section class="block sec" id="quote">
